@@ -7,7 +7,6 @@ import {
   CheckCircle2,
   Compass,
   Play,
-  Sparkles,
   Users,
 } from 'lucide-react';
 import ClientLogos from '../components/ClientLogos';
@@ -20,14 +19,9 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
 
   return (
     <>
-      {/* 1. MARITIME HERO */}
-      <section className="cruise-hero" aria-label="Cruise Ship Speaking Hero">
-        <img
-          src="/images/cruise-theater-packed.jpg"
-          alt="Packed 1,000-seat luxury cruise ship theater during a Mark Zinder keynote"
-          className="cruise-hero__bg"
-        />
-        <div className="cruise-hero__scrim" />
+      {/* 1. MARITIME HERO (MINIMALIST ARCHITECTURAL NAVY) */}
+      <section className="cruise-hero-flat" aria-label="Cruise Ship Speaking Hero">
+        <div className="hero-arch-grid" aria-hidden="true" />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <Link
@@ -46,26 +40,23 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
             <span>Back to MarkZinder.com</span>
           </Link>
 
-          <div style={{ maxWidth: 760 }}>
-            <div className="vibe-pill">
-              <Sparkles size={15} aria-hidden="true" />
-              <span>Stand-up comedy meets intellectual discovery.</span>
-            </div>
+          <div style={{ maxWidth: 780 }}>
+            <span className="hero-kicker" style={{ marginBottom: 16 }}>
+              Stand-up comedy meets intellectual discovery
+            </span>
 
-            <h1 className="hero__title">
-              Captivating Audiences Across the <em>Seven Seas.</em>
+            <h1 className="hero-viewport__title" style={{ marginBottom: 18 }}>
+              Captivating Audiences Across the Seven Seas.
             </h1>
 
-            <p className="hero__subtitle">
-              Designed for Cruise Directors seeking headline Special Interest talent — and the
-              worldly, educated 60+ guests filling your ship. Mark packs{' '}
-              <strong style={{ color: '#F3D57A' }}>1,000-seat cruise ship theaters</strong> with
-              hilarious, mind-expanding talks on AI, history, and future trends where audiences
-              retain <strong style={{ color: '#F3D57A' }}>7× more information</strong> because they
-              are laughing while they learn.
+            <p className="hero-viewport__subtitle" style={{ maxWidth: '62ch', marginBottom: 28 }}>
+              Designed for Cruise Directors seeking headline Special Interest talent and educated
+              60+ guests. Mark packs 1,000-seat cruise ship theaters with talks on AI, history, and
+              future trends where audiences retain 7x more information because they laugh while
+              learning.
             </p>
 
-            <div className="hero__ctas" style={{ marginBottom: 0 }}>
+            <div className="hero__ctas">
               <button
                 type="button"
                 className="btn btn--primary"
@@ -75,7 +66,7 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
                     ?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <CalendarCheck size={18} aria-hidden="true" />
+                <CalendarCheck size={17} aria-hidden="true" />
                 <span>Book Mark for Your Next Sailing</span>
               </button>
 
@@ -84,8 +75,8 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
                 className="btn btn--outline-light"
                 onClick={() => onOpenVideo(VIDEO_REELS[1])}
               >
-                <Play size={18} fill="currentColor" aria-hidden="true" />
-                <span>Watch Cruise Stage Reel</span>
+                <Play size={17} fill="currentColor" aria-hidden="true" />
+                <span>Watch Stage Preview</span>
               </button>
             </div>
           </div>
@@ -101,8 +92,7 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
             </div>
             <div className="stat-card__title">Higher Information Retention</div>
             <p className="stat-card__desc">
-              Audiences retain 7× more information because they are genuinely laughing while they
-              learn.
+              Audiences retain 7x more information because they laugh while learning.
             </p>
           </div>
 
@@ -112,8 +102,7 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
             </div>
             <div className="stat-card__title">Seat Theaters Packed</div>
             <p className="stat-card__desc">
-              Turns midday sea-day slots into buzzing main-stage events that build word of mouth
-              across every deck.
+              Turns midday sea-day slots into buzzing main-stage events across the ship.
             </p>
           </div>
 
@@ -121,26 +110,25 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
             <div className="stat-card__num">
               100<span>%</span>
             </div>
-            <div className="stat-card__title">Pure Intellectual Entertainment</div>
+            <div className="stat-card__title">Pure Enrichment</div>
             <p className="stat-card__desc">
-              Zero sales pitches, zero financial solicitations — just unforgettable stories, AI
-              wonder, and sharp wit.
+              Zero sales pitches. Just sharp stories, AI clarity, and genuine humor.
             </p>
           </div>
         </div>
       </div>
 
       {/* 3. INTERACTIVE SEA-DAY ENRICHMENT SERIES */}
-      <section className="section section--ivory" style={{ marginTop: 48 }} aria-labelledby="series-heading">
+      <section className="section section--ivory-soft" style={{ marginTop: 48 }} aria-labelledby="series-heading">
         <div className="container">
-          <div style={{ maxWidth: 740, marginBottom: 34 }}>
-            <span className="eyebrow">Signature 3-Part Voyage Arc</span>
+          <div style={{ maxWidth: 740, marginBottom: 32 }}>
+            <span className="section-kicker">Signature 3-Part Voyage Arc</span>
             <h2 id="series-heading" className="section-heading">
-              A Multi-Day Special Interest Series Guests Plan Their Sea Days Around
+              A Multi-Day Enrichment Series Guests Plan Their Sea Days Around
             </h2>
             <p className="section-lead">
               Select a sea day below to preview how Mark builds curiosity, laughter, and repeat
-              attendance from embarkation to the final farewell gala.
+              attendance across the voyage.
             </p>
           </div>
 
@@ -161,14 +149,16 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
 
           <div className="series-panel" role="tabpanel">
             <div>
-              <span className="topic-card__tag">{currentDay.day} · {currentDay.duration}</span>
+              <span className="topic-card__tag">
+                {currentDay.day} · {currentDay.duration}
+              </span>
               <h3
                 className="font-serif"
-                style={{ fontSize: '2rem', color: 'var(--navy-900)', margin: '8px 0 14px', lineHeight: 1.2 }}
+                style={{ fontSize: '1.9rem', color: 'var(--navy-900)', margin: '8px 0 12px', lineHeight: 1.2 }}
               >
                 {currentDay.title}
               </h3>
-              <p style={{ color: 'var(--slate-600)', fontSize: '1.06rem', margin: '0 0 22px' }}>
+              <p style={{ color: 'var(--slate-600)', fontSize: '1.04rem', margin: '0 0 20px' }}>
                 {currentDay.summary}
               </p>
 
@@ -182,42 +172,19 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
               </ul>
             </div>
 
-            <div
-              style={{
-                borderRadius: 'var(--radius-md)',
-                overflow: 'hidden',
-                border: '1px solid var(--ivory-200)',
-                background: 'var(--navy-900)',
-                color: '#FFFFFF',
-              }}
-            >
-              <img
-                src={
-                  activeDayIdx === 1
-                    ? '/images/sizzle-future-trends.jpg'
-                    : activeDayIdx === 2
-                    ? '/images/hero-stage-speaker.jpg'
-                    : '/images/cruise-theater-packed.jpg'
-                }
-                alt={currentDay.title}
-                style={{ width: '100%', aspectRatio: '16 / 10', objectFit: 'cover' }}
-              />
-              <div style={{ padding: 22 }}>
-                <div style={{ fontSize: '0.78rem', color: 'var(--gold-400)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  Audience Reaction
-                </div>
-                <p style={{ margin: '6px 0 16px', color: 'rgba(255,255,255,0.88)', fontSize: '0.96rem' }}>
-                  Ideal for 60+ world-cruise &amp; ocean-liner audiences who love lively debate,
-                  sharp humor, and optimistic insight.
-                </p>
-                <button
-                  type="button"
-                  className="btn btn--gold btn--sm"
-                  onClick={() => onOpenBooking(`Cruise Series — ${currentDay.title}`)}
-                >
-                  Request Full Series Deck
-                </button>
-              </div>
+            <div className="series-flat-aside">
+              <span className="series-flat-aside__kicker">Audience Fit</span>
+              <p>
+                Built for 60+ world-cruise and ocean-liner guests who enjoy lively debate, sharp
+                humor, and optimistic insight.
+              </p>
+              <button
+                type="button"
+                className="btn btn--gold btn--sm"
+                onClick={() => onOpenBooking(`Cruise Series: ${currentDay.title}`)}
+              >
+                Request Full Series Deck
+              </button>
             </div>
           </div>
         </div>
@@ -226,30 +193,30 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
       {/* 4. GUEST EXPERIENCE VS CRUISE DIRECTOR VALUE */}
       <section className="section" aria-labelledby="why-cruise-heading">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 48px' }}>
-            <span className="eyebrow">Built for Luxury Voyages</span>
+          <div style={{ maxWidth: 700, marginBottom: 42 }}>
+            <span className="section-kicker">Built for Luxury Voyages</span>
             <h2 id="why-cruise-heading" className="section-heading">
-              Why Both Voyagers &amp; Cruise Directors Love Having Mark Aboard
+              Why Both Voyagers and Cruise Directors Love Having Mark Aboard
             </h2>
           </div>
 
           <div className="comparison-grid">
             <div className="comparison-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 }}>
-                <Compass size={26} color="#D9641E" aria-hidden="true" />
-                <h3 className="font-serif" style={{ fontSize: '1.6rem', color: 'var(--navy-900)', margin: 0 }}>
+                <Compass size={24} color="#D9641E" aria-hidden="true" />
+                <h3 className="font-serif" style={{ fontSize: '1.5rem', color: 'var(--navy-900)', margin: 0 }}>
                   For Discerning 60+ Voyagers
                 </h3>
               </div>
               <p style={{ color: 'var(--slate-600)', margin: 0 }}>
-                Educated, well-traveled guests arrive eager for substance without stuffiness.
+                Well-traveled guests arrive eager for substance without stuffiness.
               </p>
               <ul className="check-list">
                 <li>
                   <CheckCircle2 size={18} aria-hidden="true" />
                   <span>
-                    <strong>Laughing While Learning:</strong> Guests remember 7× more because
-                    history and AI are served with comedy-club timing.
+                    <strong>Laughing While Learning:</strong> Guests remember 7x more because history
+                    and AI are served with comedy-club timing.
                   </span>
                 </li>
                 <li>
@@ -263,7 +230,7 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
                   <CheckCircle2 size={18} aria-hidden="true" />
                   <span>
                     <strong>Approachable Salon Host:</strong> Mark mingles warmly after talks,
-                    continuing conversations at afternoon tea and dinner tables.
+                    continuing conversations across the ship.
                   </span>
                 </li>
               </ul>
@@ -271,34 +238,34 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
 
             <div className="comparison-card comparison-card--navy">
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 }}>
-                <Users size={26} color="#E7BC48" aria-hidden="true" />
-                <h3 className="font-serif" style={{ fontSize: '1.6rem', color: '#FFFFFF', margin: 0 }}>
+                <Users size={24} color="#E7BC48" aria-hidden="true" />
+                <h3 className="font-serif" style={{ fontSize: '1.5rem', color: '#FFFFFF', margin: 0 }}>
                   For Cruise &amp; Enrichment Directors
                 </h3>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0 }}>
-                Effortless backstage professionalism paired with main-theater drawing power.
+                Dependable backstage professionalism paired with main-theater drawing power.
               </p>
               <ul className="check-list">
                 <li>
                   <CheckCircle2 size={18} aria-hidden="true" />
                   <span>
                     <strong>Packs 1,000-Seat Theaters:</strong> Turns quiet sea-day slots into
-                    marquee enrichment highlights with sky-high comment-card scores.
+                    marquee enrichment highlights with strong comment cards.
                   </span>
                 </li>
                 <li>
                   <CheckCircle2 size={18} aria-hidden="true" />
                   <span>
-                    <strong>Plug-and-Play AV:</strong> Self-contained visual storytelling built
-                    cleanly for ship theater projection and roving wireless mics.
+                    <strong>Plug-and-Play AV:</strong> Self-contained 16:9 visuals built cleanly
+                    for theater projection and wireless mics.
                   </span>
                 </li>
                 <li>
                   <CheckCircle2 size={18} aria-hidden="true" />
                   <span>
-                    <strong>Adaptable Multi-Lecture Arcs:</strong> Ready for 2-day crossings,
-                    7-day Mediterranean sailings, or multi-week World Cruise segments.
+                    <strong>Adaptable Multi-Lecture Arcs:</strong> Ready for crossings, 7-day
+                    sailings, or multi-week World Cruise segments.
                   </span>
                 </li>
               </ul>
@@ -308,18 +275,18 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
       </section>
 
       {/* 5. PAST CLIENTS + QUOTE */}
-      <section className="section section--ivory" aria-label="Credibility and testimonial">
+      <section className="section section--ivory-soft" aria-label="Credibility and testimonial">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 38px' }}>
-            <span className="eyebrow">World-Stage Pedigree</span>
+          <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 36px' }}>
+            <span className="section-kicker">World-Stage Pedigree</span>
             <p
               className="font-serif"
-              style={{ fontSize: 'clamp(1.45rem, 2.5vw, 2rem)', color: 'var(--navy-900)', margin: '16px 0 12px', lineHeight: 1.38 }}
+              style={{ fontSize: 'clamp(1.4rem, 2.4vw, 1.95rem)', color: 'var(--navy-900)', margin: '14px 0 12px', lineHeight: 1.38 }}
             >
               “{TESTIMONIALS[0].quote}”
             </p>
             <div style={{ fontWeight: 700, color: 'var(--orange-600)' }}>
-              — {TESTIMONIALS[0].author}, {TESTIMONIALS[0].role}
+              {TESTIMONIALS[0].author}, {TESTIMONIALS[0].role}
             </div>
           </div>
           <ClientLogos />
@@ -331,13 +298,15 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
         <div className="container">
           <div className="booking-grid">
             <div>
-              <span className="eyebrow eyebrow--light">Cruise Line &amp; Charter Bookings</span>
+              <span className="section-kicker section-kicker--light">
+                Cruise Line &amp; Charter Bookings
+              </span>
               <h2 id="cruise-book-heading" className="section-heading section-heading--light">
                 Reserve Mark Zinder for Your Upcoming Sailings
               </h2>
-              <p className="section-lead section-lead--light" style={{ marginBottom: 26 }}>
+              <p className="section-lead section-lead--light" style={{ marginBottom: 24 }}>
                 Available for Ocean, Expedition, and Luxury River itineraries worldwide. Send your
-                sailing dates to receive Mark’s Cruise Enrichment One-Sheet and full promo reel.
+                sailing dates to receive Mark’s Cruise Enrichment One-Sheet.
               </p>
 
               <div className="booking-info-list">
@@ -352,29 +321,18 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
                     </span>
                   </div>
                 </div>
-                <div className="booking-info-item">
-                  <Sparkles size={20} aria-hidden="true" />
-                  <div>
-                    <strong style={{ display: 'block', color: '#FFFFFF' }}>
-                      Customizable 2 to 6-Talk Voyages
-                    </strong>
-                    <span style={{ color: 'rgba(255,255,255,0.8)' }}>
-                      Main-theater lectures plus optional evening Q&amp;A lounge salons
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div className="booking-form-card">
               <h3
                 className="font-serif"
-                style={{ fontSize: '1.65rem', color: 'var(--navy-900)', margin: '0 0 8px' }}
+                style={{ fontSize: '1.6rem', color: 'var(--navy-900)', margin: '0 0 8px' }}
               >
                 Cruise Enrichment Inquiry
               </h3>
-              <p style={{ color: 'var(--slate-600)', margin: '0 0 24px', fontSize: '0.96rem' }}>
-                Direct priority scheduling for Cruise Directors, Agencies, and Programming Teams.
+              <p style={{ color: 'var(--slate-600)', margin: '0 0 22px', fontSize: '0.95rem' }}>
+                Direct priority scheduling for Cruise Directors and Programming Teams.
               </p>
               <BookingForm
                 defaultEventType="Cruise Ship Enrichment Series"

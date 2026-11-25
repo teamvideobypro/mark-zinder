@@ -23,18 +23,18 @@ export default function Footer({ onOpenBooking }) {
     <footer className="malcom-footer">
       <div className="container">
         <div className="malcom-footer-card">
-          <div className="malcom-footer-card__portrait">
-            <img
-              src="/images/mark-zinder-portrait.jpg"
-              alt="Mark Zinder — Historian, Futurist & Keynote Storyteller"
-            />
-          </div>
-
           <div>
-            <div className="brand-mark" style={{ marginBottom: 16 }}>
+            <div className="brand-mark" style={{ marginBottom: 14 }}>
               <img src="/images/mz-logo.png" alt="Mark Zinder MZ Logo" className="brand-mark__logo" />
               <span className="brand-mark__name">{SITE_META.speakerName.toUpperCase()}</span>
             </div>
+            <p style={{ margin: 0, color: 'var(--slate-600)', fontSize: '0.94rem', maxWidth: '34ch' }}>
+              Keynote speaking on AI, history, future trends, and humor for global stages and
+              1,000-seat cruise ship theaters.
+            </p>
+          </div>
+
+          <div>
             <strong className="malcom-footer-heading">Navigation</strong>
             <ul className="malcom-footer-links">
               <li>

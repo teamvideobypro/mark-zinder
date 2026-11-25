@@ -6,6 +6,7 @@ import {
   ArrowUpRight,
   CalendarCheck,
   ChevronDown,
+  Eye,
   Mail,
   MapPin,
   Phone,
@@ -23,66 +24,32 @@ import {
   SPEAKING_TOPICS,
   TESTIMONIALS,
   VIDEO_REELS,
+  WORK_WITH_MARK_STEPS,
 } from '../data/siteContent';
 
-const BENTO_CARDS = [
-  {
-    num: '01',
-    title: SPEAKING_TOPICS[0].title,
-    subtitle: SPEAKING_TOPICS[0].subtitle,
-    image: '/images/sizzle-future-trends.jpg',
-    type: 'topic',
-    payload: SPEAKING_TOPICS[0],
-  },
-  {
-    num: '02',
-    title: SPEAKING_TOPICS[1].title,
-    subtitle: SPEAKING_TOPICS[1].subtitle,
-    image: '/images/hero-stage-speaker.jpg',
-    type: 'topic',
-    payload: SPEAKING_TOPICS[1],
-  },
-  {
-    num: '03',
-    title: SPEAKING_TOPICS[2].title,
-    subtitle: SPEAKING_TOPICS[2].subtitle,
-    image: '/images/cruise-theater-packed.jpg',
-    type: 'topic',
-    payload: SPEAKING_TOPICS[2],
-  },
-  {
-    num: '04',
-    title: VIDEO_REELS[0].title,
-    subtitle: VIDEO_REELS[0].description,
-    image: '/images/mark-zinder-portrait.jpg',
-    type: 'video',
-    payload: VIDEO_REELS[0],
-  },
-];
+const WORK_STEP_ICONS = {
+  see: Eye,
+  'reach-out': Mail,
+  book: CalendarCheck,
+  captivate: Sparkles,
+};
 
 export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
   const [openFaqIdx, setOpenFaqIdx] = useState(0);
 
   return (
     <>
-      {/* 1. FULL-WIDTH 100% VIEWPORT HERO (SUMMITRA COMPOSITION) */}
+      {/* 1. FULL-WIDTH 100% VIEWPORT MINIMALIST ARCHITECTURAL HERO */}
       <section className="hero-viewport" aria-label="Introduction">
         <SizzleReelBackground />
 
         <div className="hero-viewport__inner">
           <div className="hero-viewport__top">
-            <div className="hero__badge">
-              <span className="hero__badge-dot" aria-hidden="true" />
-              <span>{HERO_CONTENT.badge}</span>
-            </div>
+            <span className="hero-kicker">{HERO_CONTENT.badge}</span>
           </div>
 
           <div className="hero-viewport__headline-wrap">
-            <span className="hero-tilted-tag">AI · HISTORY · HUMOR</span>
-            <h1 className="hero-viewport__title">
-              {HERO_CONTENT.headline}
-              <em>{HERO_CONTENT.headlineAccent}</em>
-            </h1>
+            <h1 className="hero-viewport__title">{HERO_CONTENT.headline}</h1>
           </div>
 
           <div className="hero-viewport__bottom">
@@ -110,155 +77,93 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
               </div>
             </div>
 
-            <div className="hero-stat-pills" aria-label="Key speaker metrics">
-              <div className="hero-stat-pill">
+            <div className="hero-metrics-flat" aria-label="Speaker highlights">
+              <div className="hero-metric-item">
                 <strong>7×</strong>
-                <span>Laughing While Learning</span>
+                <span>Higher retention</span>
               </div>
-              <div className="hero-stat-pill">
+              <div className="hero-metric-item">
                 <strong>1,000+</strong>
-                <span>Cruise Theater Seats</span>
+                <span>Theater seats</span>
               </div>
-              <div className="hero-stat-pill">
+              <div className="hero-metric-item">
                 <strong>40+</strong>
-                <span>Years on Global Stages</span>
-              </div>
-              <div className="hero-stat-pill">
-                <strong>NASA · IBM</strong>
-                <span>&amp; Global Forums</span>
+                <span>Years on stage</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. 2x2 BENTO GRID — SPEAKING TOPICS & KEYNOTE HIGHLIGHTS */}
+      {/* 2. SPEAKING TOPICS: CLEAN 3-COLUMN TYPOGRAPHIC GRID */}
       <section id="topics" className="section section--ivory-soft" aria-labelledby="topics-heading">
         <div className="container">
-          <div className="malcom-centered-head">
-            <span className="eyebrow">Signature Keynotes</span>
-            <h2 id="topics-heading" className="section-heading">
-              Practical Insights, Sharp Humor &amp; Unforgettable Keynotes
-            </h2>
-            <p className="section-lead" style={{ margin: '0 auto 24px' }}>
-              Zero jargon. Zero dry slides. Select a keynote pillar below to explore takeaways
-              and stage outlines.
-            </p>
-            <div className="malcom-head-actions">
-              <button
-                type="button"
-                className="btn btn--navy btn--sm"
-                onClick={() => onOpenBooking('Custom Keynote Program')}
-              >
-                Book Mark Zinder
-              </button>
-              <span className="malcom-rating-pill">
-                <Star size={14} fill="currentColor" aria-hidden="true" />
-                <span>7× Higher Retention · 40+ Years on Global Stages</span>
-              </span>
+          <div className="section-head-flat">
+            <div>
+              <span className="section-kicker">Signature Keynotes</span>
+              <h2 id="topics-heading" className="section-heading">
+                Three Keynotes on History, AI, and Humor
+              </h2>
             </div>
+            <p className="section-lead">
+              Zero jargon and zero dry slides. Select a topic to view the full stage outline and
+              audience takeaways.
+            </p>
           </div>
 
-          <div className="bento-grid-2x2">
-            {BENTO_CARDS.map((card) => (
+          <div className="flat-topics-grid">
+            {SPEAKING_TOPICS.map((topic) => (
               <button
-                key={card.num}
+                key={topic.id}
                 type="button"
-                className="bento-card"
-                onClick={() =>
-                  card.type === 'topic' ? onOpenTopic(card.payload) : onOpenVideo(card.payload)
-                }
+                className="flat-topic-card"
+                onClick={() => onOpenTopic(topic)}
               >
-                <div className="bento-card__header">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <span className="bento-card__num">{card.num}</span>
-                    <div style={{ textAlign: 'left' }}>
-                      <h3 className="bento-card__title">{card.title}</h3>
-                      <span className="bento-card__sub">{card.subtitle}</span>
-                    </div>
-                  </div>
-                  <span className="bento-card__arrow" aria-hidden="true">
-                    <ArrowUpRight size={18} />
-                  </span>
+                <div className="flat-topic-card__top">
+                  <span className="flat-topic-card__num">{topic.number}</span>
+                  <ArrowUpRight size={18} className="flat-topic-card__arrow" aria-hidden="true" />
                 </div>
-                <div className="bento-card__media">
-                  <img src={card.image} alt={card.title} />
-                </div>
+                <span className="flat-topic-card__tag">{topic.tag}</span>
+                <h3 className="flat-topic-card__title">{topic.title}</h3>
+                <p className="flat-topic-card__desc">{topic.description}</p>
+                <div className="flat-topic-card__meta">{topic.duration}</div>
               </button>
             ))}
           </div>
-
-          {/* 3-Card Horizontal Idea Strip (Malcom Compact Row) */}
-          <div style={{ marginTop: 64 }}>
-            <div className="malcom-centered-head" style={{ marginBottom: 32 }}>
-              <h3 className="font-serif" style={{ fontSize: '1.85rem', color: 'var(--navy-900)', margin: 0 }}>
-                Why Audiences &amp; Organizers Remember Every Word
-              </h3>
-            </div>
-            <div className="mini-strip-grid">
-              <div className="mini-strip-card">
-                <img src="/images/hero-stage-speaker.jpg" alt="Laughing while learning" />
-                <div>
-                  <span className="mini-strip-card__num">01 · RETENTION</span>
-                  <strong>7× More Information</strong>
-                  <p>Audiences retain 7× more because they are laughing while they learn.</p>
-                </div>
-              </div>
-              <div className="mini-strip-card">
-                <img src="/images/cruise-theater-packed.jpg" alt="Packed 1,000-seat theater" />
-                <div>
-                  <span className="mini-strip-card__num">02 · AT SEA</span>
-                  <strong>1,000-Seat Cruise Theaters</strong>
-                  <p>Stand-up comedy meets intellectual discovery for discerning 60+ guests.</p>
-                </div>
-              </div>
-              <div className="mini-strip-card">
-                <img src="/images/sizzle-future-trends.jpg" alt="Optimistic futurism" />
-                <div>
-                  <span className="mini-strip-card__num">03 · PEDIGREE</span>
-                  <strong>NASA, IBM &amp; Global Forums</strong>
-                  <p>Four decades translating complex trends into optimistic clarity.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 3. ABOUT SPLIT SECTION (WARM SURFACE) */}
+      {/* 3. ABOUT MARK ZINDER: OFFICIAL PHOTO + BIO */}
       <section id="about" className="section" aria-labelledby="about-heading">
         <div className="container">
           <div className="about-grid">
-            <div className="about-portrait-frame">
+            <div className="about-photo-frame">
               <img
-                src="/images/mark-zinder-portrait.jpg"
-                alt="Editorial portrait of Historian and Futurist Mark Zinder"
+                src="/images/mark-zinder-official.jpg"
+                alt="Mark Zinder, Historian, Futurist, and Keynote Speaker"
               />
             </div>
 
             <div>
-              <span className="eyebrow">About Mark Zinder</span>
+              <span className="section-kicker">About Mark Zinder</span>
               <h2 id="about-heading" className="section-heading">
-                Hi, I’m Mark Zinder.
+                From Comedy Clubs and Magic Stages to NASA and the High Seas.
               </h2>
-              <p className="section-lead" style={{ marginBottom: 16, color: 'var(--navy-900)', fontWeight: 500 }}>
-                From Comedy Clubs &amp; Magic Stages to NASA and the High Seas.
-              </p>
-              <p style={{ color: 'var(--slate-600)', margin: '0 0 16px', fontSize: '1.04rem' }}>
-                Before sharing global stages with pioneers at NASA and IBM — or serving for years
-                as National Spokesman alongside legendary global thinker Sir John Templeton — I cut
-                my teeth managing comedy clubs and performing sleight-of-hand magic.
+              <p className="section-lead" style={{ marginBottom: 18 }}>
+                Before sharing global stages with pioneers at NASA and IBM, or serving as National
+                Spokesman alongside Sir John Templeton, Mark managed comedy clubs and performed
+                magic.
               </p>
               <p style={{ color: 'var(--slate-600)', margin: '0 0 26px', fontSize: '1.04rem' }}>
-                That unusual combination is my favorite tool on stage: holding a 1,000-seat theater
-                in warmth and laughter while translating AI, history, and future breakthroughs into
-                stories guests talk about for the rest of the voyage.
+                That background shapes every keynote today: holding a 1,000-seat room in warmth and
+                laughter while translating AI, history, and future trends into stories guests
+                remember.
               </p>
 
               <button
                 type="button"
                 className="btn btn--navy"
-                onClick={() => onOpenBooking('About Mark — Speaking Inquiry')}
+                onClick={() => onOpenBooking('About Mark Inquiry')}
               >
                 <span>Book Mark Zinder</span>
                 <ArrowRight size={16} aria-hidden="true" />
@@ -266,113 +171,149 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
             </div>
           </div>
 
-          <div className="trust-inline-wrap" style={{ marginTop: 64 }}>
-            <p className="trust-bar__label" style={{ marginBottom: 18 }}>
-              Trusted on Global Stages &amp; Executive Forums Including
-            </p>
+          <div className="trust-inline-wrap">
+            <p className="trust-bar__label">Trusted on Global Stages Including</p>
             <ClientLogos />
           </div>
         </div>
       </section>
 
-      {/* 4. STICKY WALKTHROUGH — A THOUGHTFUL PATH FROM HISTORY TO FUTURE */}
-      <section className="section section--ivory-soft" aria-labelledby="path-heading">
+      {/* 4. KEYNOTE PROGRAM VIDEOS (4 YOUTUBE VIDEOS WITH THUMBNAILS) */}
+      <section id="videos" className="section section--ivory-soft" aria-labelledby="videos-heading">
         <div className="container">
-          <div className="malcom-centered-head" style={{ marginBottom: 52 }}>
-            <span className="eyebrow">The Keynote Arc</span>
-            <h2 id="path-heading" className="section-heading">
-              A Thoughtful Path From History to Tomorrow
-            </h2>
-          </div>
-
-          <div className="sticky-path-grid">
-            <div className="sticky-path__media">
-              <img
-                src="/images/sizzle-future-trends.jpg"
-                alt="Historical astrolabe morphing into solar and vertical farming breakthroughs"
-              />
+          <div className="section-head-flat" style={{ marginBottom: 36 }}>
+            <div>
+              <span className="section-kicker">Keynote Programs</span>
+              <h2 id="videos-heading" className="section-heading">
+                Watch Mark’s Keynote Program Previews
+              </h2>
             </div>
-
-            <div className="sticky-path__steps">
-              {SPEAKING_TOPICS.map((topic) => (
-                <div key={topic.id} className="path-step">
-                  <span className="path-step__num">PILLAR {topic.number} · {topic.tag}</span>
-                  <h3 className="path-step__title">{topic.title}</h3>
-                  <p className="path-step__desc">{topic.description}</p>
-                  <div className="path-step__box">
-                    <strong>Key Audience Takeaway</strong>
-                    <p>{topic.takeaways[0]}</p>
-                    <button
-                      type="button"
-                      className="text-link-btn"
-                      style={{ marginTop: 10, fontSize: '0.9rem' }}
-                      onClick={() => onOpenTopic(topic)}
-                    >
-                      <span>View Full Keynote Outline</span>
-                      <ArrowRight size={15} aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. STAGE REELS & VIDEO PROGRAMS (3-CARD RESOURCE GRID) */}
-      <section id="videos" className="section" aria-labelledby="videos-heading">
-        <div className="container">
-          <div className="malcom-centered-head" style={{ marginBottom: 44 }}>
-            <span className="eyebrow">Keynote Speaking Programs &amp; Stage Reels</span>
-            <h2 id="videos-heading" className="section-heading">
-              Stories &amp; Insights That Move Audiences Forward
-            </h2>
+            <p className="section-lead">
+              Select any keynote video below to watch the program preview.
+            </p>
           </div>
 
-          <div className="resource-cards-grid">
-            {VIDEO_REELS.slice(0, 3).map((reel) => (
+          <div className="program-videos-grid">
+            {VIDEO_REELS.map((reel) => (
               <button
                 key={reel.id}
                 type="button"
-                className="resource-card"
+                className="program-video-card"
                 onClick={() => onOpenVideo(reel)}
               >
-                <div className="resource-card__thumb">
+                <div className="program-video-card__thumb">
                   <img src={reel.thumb} alt={reel.title} />
-                  <span className="resource-card__play">
-                    <Play size={18} fill="currentColor" aria-hidden="true" />
+                  <span className="program-video-card__play">
+                    <Play size={20} fill="currentColor" aria-hidden="true" />
                   </span>
                 </div>
-                <div className="resource-card__body">
-                  <span className="resource-card__tag">{reel.tag}</span>
-                  <h3 className="resource-card__title">{reel.title}</h3>
-                  <p className="resource-card__desc">{reel.description}</p>
+                <div className="program-video-card__body">
+                  <span className="flat-topic-card__tag">{reel.tag}</span>
+                  <h3 className="program-video-card__title">{reel.title}</h3>
+                  <p className="program-video-card__desc">{reel.description}</p>
                 </div>
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ textAlign: 'center', marginTop: 34 }}>
+      {/* 5. HERE'S HOW TO WORK WITH MARK */}
+      <section className="section" aria-labelledby="work-with-mark-heading">
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 52px' }}>
+            <span className="section-kicker">Simple Booking Process</span>
+            <h2 id="work-with-mark-heading" className="section-heading">
+              Here’s How To Work With Mark
+            </h2>
+          </div>
+
+          <div className="work-steps-grid">
+            {WORK_WITH_MARK_STEPS.map((step) => {
+              const Icon = WORK_STEP_ICONS[step.id] || Sparkles;
+              return (
+                <div key={step.id} className="work-step-item">
+                  <div className="work-step-icon" aria-hidden="true">
+                    <Icon size={24} />
+                  </div>
+                  <h3 className="work-step-title">{step.title}</h3>
+                  <p className="work-step-desc">{step.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 42 }}>
             <button
               type="button"
               className="btn btn--primary"
-              onClick={() => onOpenVideo(VIDEO_REELS[3] || VIDEO_REELS[0])}
+              onClick={() => onOpenBooking('Contact Mark Inquiry')}
             >
-              <Play size={16} fill="currentColor" aria-hidden="true" />
-              <span>Watch “Is It Different This Time?” Preview</span>
+              Contact Mark
             </button>
           </div>
         </div>
       </section>
 
-      {/* 6. TESTIMONIALS GRID */}
+      {/* 5. CRUISE SHIP SPEAKING FLAT SPOTLIGHT */}
+      <section className="section" aria-labelledby="cruise-spotlight-heading">
+        <div className="container">
+          <div className="cruise-flat-banner">
+            <div className="cruise-flat-banner__left">
+              <span className="section-kicker section-kicker--light">
+                Special Interest Enrichment at Sea
+              </span>
+              <h2 id="cruise-spotlight-heading" className="section-heading section-heading--light">
+                Captivating Audiences Across the Seven Seas.
+              </h2>
+              <p className="section-lead section-lead--light" style={{ marginBottom: 24 }}>
+                Stand-up comedy meets intellectual discovery. Guests retain 7× more information
+                because they laugh while learning, filling 1,000-seat cruise ship theaters on sea
+                days.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+                <Link to="/cruise-ship-speaking" className="btn btn--gold">
+                  <Anchor size={16} aria-hidden="true" />
+                  <span>Explore Cruise Ship Speaking</span>
+                </Link>
+                <button
+                  type="button"
+                  className="btn btn--outline-light"
+                  onClick={() => onOpenBooking('Cruise Ship Enrichment Series')}
+                >
+                  Check Sailing Dates
+                </button>
+              </div>
+            </div>
+
+            <div className="cruise-flat-banner__stats">
+              <div className="cruise-stat-box">
+                <strong>7×</strong>
+                <span>Higher retention when audiences laugh while learning</span>
+              </div>
+              <div className="cruise-stat-box">
+                <strong>1,000+</strong>
+                <span>Main theater seats packed on sea days</span>
+              </div>
+              <div className="cruise-stat-box">
+                <strong>0</strong>
+                <span>Sales pitches. Pure enrichment only.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. TESTIMONIALS */}
       <section className="section section--ivory-soft" aria-labelledby="testimonials-heading">
         <div className="container">
-          <div className="malcom-centered-head" style={{ marginBottom: 44 }}>
-            <span className="eyebrow">Audience &amp; Organizer Praise</span>
-            <h2 id="testimonials-heading" className="section-heading">
-              Words From Audiences &amp; Directors
-            </h2>
+          <div className="section-head-flat" style={{ marginBottom: 36 }}>
+            <div>
+              <span className="section-kicker">Audience Praise</span>
+              <h2 id="testimonials-heading" className="section-heading">
+                Words From Audiences &amp; Directors
+              </h2>
+            </div>
           </div>
 
           <div className="summitra-testimonials-grid">
@@ -402,58 +343,16 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
         </div>
       </section>
 
-      {/* 7. DARK ROUNDED CRUISE SPOTLIGHT CARD (MALCOM "WHAT'S COMING UP" CONTAINER) */}
-      <section className="section" aria-labelledby="cruise-spotlight-heading">
+      {/* 7. FAQ ACCORDION */}
+      <section className="section" aria-labelledby="faq-heading">
         <div className="container">
-          <div className="malcom-dark-feature">
-            <div className="malcom-dark-feature__media">
-              <img
-                src="/images/cruise-theater-packed.jpg"
-                alt="1,000-seat luxury cruise ship theater"
-              />
-            </div>
-
-            <div className="malcom-dark-feature__content">
-              <span className="eyebrow eyebrow--light">Special Interest Enrichment at Sea</span>
-              <h2 id="cruise-spotlight-heading" className="section-heading section-heading--light">
-                Captivating Audiences Across the Seven Seas.
+          <div className="section-head-flat" style={{ marginBottom: 32 }}>
+            <div>
+              <span className="section-kicker">Logistics</span>
+              <h2 id="faq-heading" className="section-heading">
+                Frequently Asked Questions
               </h2>
-              <div className="vibe-pill">
-                <Sparkles size={14} aria-hidden="true" />
-                <span>Stand-up comedy meets intellectual discovery.</span>
-              </div>
-              <p className="section-lead section-lead--light" style={{ marginBottom: 24 }}>
-                Audiences retain <strong style={{ color: '#F3D57A' }}>7× more information</strong>{' '}
-                because they are laughing while they learn — turning sea-day afternoons into{' '}
-                <strong style={{ color: '#F3D57A' }}>1,000-seat cruise ship theaters</strong>{' '}
-                buzzing with conversation.
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-                <Link to="/cruise-ship-speaking" className="btn btn--gold">
-                  <span>Explore Cruise Ship Speaking</span>
-                  <ArrowRight size={16} aria-hidden="true" />
-                </Link>
-                <button
-                  type="button"
-                  className="btn btn--outline-light"
-                  onClick={() => onOpenBooking('Cruise Ship Enrichment Series')}
-                >
-                  Check Sailing Dates
-                </button>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. FAQ ACCORDION */}
-      <section className="section section--ivory-soft" aria-labelledby="faq-heading">
-        <div className="container">
-          <div className="malcom-centered-head" style={{ marginBottom: 38 }}>
-            <span className="eyebrow">Organizer Details</span>
-            <h2 id="faq-heading" className="section-heading">
-              Frequently Asked Questions
-            </h2>
           </div>
 
           <div className="faq-list">
@@ -486,23 +385,21 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
         </div>
       </section>
 
-      {/* 9. FINAL CENTERED CTA & CONTACT BOOKING */}
-      <section id="contact" className="section" aria-labelledby="contact-heading">
+      {/* 8. CONTACT & BOOKING */}
+      <section id="contact" className="section section--ivory-soft" aria-labelledby="contact-heading">
         <div className="container">
-          <div className="malcom-centered-head" style={{ marginBottom: 48 }}>
-            <span className="eyebrow">Book Mark Zinder</span>
-            <h2 id="contact-heading" className="section-heading">
-              Ready to Bring History, AI &amp; Laughter to Your Stage?
-            </h2>
-            <p className="section-lead" style={{ margin: '0 auto' }}>
-              Share your sailing dates or event details and our Nashville speaking desk will reply
-              within 24 hours.
-            </p>
-          </div>
-
           <div className="booking-grid">
             <div>
-              <div className="booking-info-list" style={{ marginTop: 0 }}>
+              <span className="section-kicker">Book Mark Zinder</span>
+              <h2 id="contact-heading" className="section-heading">
+                Bring History, AI, and Laughter to Your Stage
+              </h2>
+              <p className="section-lead" style={{ marginBottom: 24 }}>
+                Share your sailing dates or event details. Our Nashville speaking desk replies
+                within 24 hours.
+              </p>
+
+              <div className="booking-info-list">
                 <div className="booking-info-item booking-info-item--light">
                   <Mail size={20} aria-hidden="true" />
                   <div>
@@ -527,9 +424,7 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
                     <strong style={{ display: 'block', color: 'var(--navy-900)' }}>
                       Home Base &amp; Ports
                     </strong>
-                    <span style={{ color: 'var(--slate-600)' }}>
-                      {SITE_META.location} · Easy embarkation globally
-                    </span>
+                    <span style={{ color: 'var(--slate-600)' }}>{SITE_META.location}</span>
                   </div>
                 </div>
               </div>

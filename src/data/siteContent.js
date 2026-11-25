@@ -1,6 +1,6 @@
 export const SITE_META = {
   speakerName: 'Mark Zinder',
-  tagline: 'Historian · Futurist · Keynote Storyteller',
+  tagline: 'Historian · Futurist · Storyteller',
   domain: 'markzinder.com',
   email: 'booking@markzinder.com',
   phone: '(800) 555-0194',
@@ -17,17 +17,11 @@ export const NAV_LINKS = [
 
 export const HERO_CONTENT = {
   badge: 'Historian · Futurist · Storyteller',
-  headline: 'Understanding the Revolutions Shaping Our World — ',
-  headlineAccent: 'And What Happens Next.',
+  headline: 'Understanding the Revolutions Shaping Our World. And What Happens Next.',
   subheadline:
-    'Entertaining. Enlightening. Actionable insights on AI, History, and Future Trends with Historian & Futurist Mark Zinder.',
+    'Entertaining, enlightening insights on AI, history, and future trends with Mark Zinder.',
   primaryCta: 'Watch Video',
   secondaryCta: 'Book Mark Zinder',
-  proofItems: [
-    { highlight: '7× Retention', text: 'Laughing while learning' },
-    { highlight: '1,000-Seat Theaters', text: 'Packed from land to sea' },
-    { highlight: '40+ Years', text: 'Trusted by NASA, IBM & global forums' },
-  ],
 };
 
 export const SPEAKING_TOPICS = [
@@ -38,16 +32,16 @@ export const SPEAKING_TOPICS = [
     title: 'How We Got to Now',
     subtitle: 'The historical revolutions and patterns that predict the future.',
     description:
-      'Every astonishing breakthrough of our era has an echo in history. Mark connects the dots from the printing press and age of sail to modern global transformations — giving audiences a crystal-clear compass for what comes next.',
+      'Every major breakthrough has an echo in history. Mark connects the printing press and age of sail to modern shifts, giving audiences a clear compass for what comes next.',
     takeaways: [
       'Why turbulent eras consistently precede golden ages of human ingenuity',
-      'Surprising historical parallels from the Renaissance, Industrial Age, and Space Race',
-      'How to recognize real generational shifts hidden beneath daily headlines',
+      'Historical parallels from the Renaissance, Industrial Age, and Space Race',
+      'How to spot real generational shifts beneath daily headlines',
     ],
     idealFor: 'Cruise Sea-Day Enrichment, University Forums & Executive Retreats',
-    duration: '45–60 Min Keynote + Audience Q&A',
+    duration: '45 to 60 Min Keynote + Audience Q&A',
     outlineIntro:
-      'Delivered with crisp storytelling, historical humor, and awe-inspiring visuals — zero dry academic lectures.',
+      'Delivered with crisp storytelling, historical humor, and clear visuals. Zero dry academic lectures.',
   },
   {
     id: 'beyond-ai',
@@ -55,18 +49,18 @@ export const SPEAKING_TOPICS = [
     tag: 'Future Breakthroughs',
     title: 'Beyond AI: What in the World Happens Next?',
     subtitle:
-      'Exploring extraordinary breakthroughs like solar energy, vertical farming, and supercomputing.',
+      'Breakthroughs in solar energy, vertical farming, and supercomputing.',
     description:
-      'Step past the doom-and-gloom headlines. Mark unveils the astonishing real-world inventions transforming how humanity generates clean energy, grows abundant food, heals disease, and solves once-impossible challenges.',
+      'Step past doom-and-gloom headlines. Mark reveals the real-world inventions reshaping clean energy, abundant food, medicine, and daily human life.',
     takeaways: [
-      'Next-generation solar abundance & the quiet revolution in global energy',
-      'Vertical farming & bio-engineering feeding cities on a fraction of the water',
-      'How supercomputing & human-centered AI unlock a new era of curiosity and longevity',
+      'Next-generation solar abundance and the quiet shift in global energy',
+      'Vertical farming and bio-engineering feeding cities on far less water',
+      'How supercomputing and human-centered AI advance longevity and curiosity',
     ],
     idealFor: 'Curious Lifelong Learners, Innovation Summits & Luxury Voyages',
-    duration: '45–60 Min Keynote + Fireside Q&A',
+    duration: '45 to 60 Min Keynote + Fireside Q&A',
     outlineIntro:
-      'Demystifies cutting-edge science in warm, plain language everyone in the room enjoys.',
+      'Explains modern science in plain, warm language everyone in the room enjoys.',
   },
   {
     id: 'what-are-the-odds',
@@ -76,111 +70,90 @@ export const SPEAKING_TOPICS = [
     subtitle:
       'A humorous, inspiring journey about overcoming obstacles and changing your life.',
     description:
-      'Drawing on his early years managing comedy clubs, performing magic, and studying improbable turning points in history, Mark delivers a side-splitting yet deeply moving exploration of luck, timing, and resilience.',
+      'Drawing on his years managing comedy clubs, performing magic, and studying improbable turning points, Mark delivers a hilarious look at luck, timing, and resilience.',
     takeaways: [
-      'Hilarious true stories of improbable coincidences that altered world history',
+      'True stories of improbable coincidences that altered world history',
       'Why curiosity and adaptability beat rigid predictions in every chapter of life',
       'Practical wisdom for turning unexpected detours into your finest chapter',
     ],
     idealFor: 'Opening Night Galas, Special Interest Series & Cultural Foundations',
-    duration: '45–60 Min Entertaining Keynote',
+    duration: '45 to 60 Min Entertaining Keynote',
     outlineIntro:
-      'Stand-up timing meets profound optimism — leaving audiences wiping away tears of laughter and inspiration.',
+      'Stand-up timing meets grounded optimism, leaving audiences laughing and inspired.',
   },
 ];
 
 export const VIDEO_REELS = [
   {
-    id: 'ai-retaining-relevance',
-    tag: 'Keynote Program · 03:20',
+    id: 'Nfel6qdXrNI',
+    youtubeId: 'Nfel6qdXrNI',
+    url: 'https://youtu.be/Nfel6qdXrNI',
+    tag: 'Keynote Program 01',
     title: 'Artificial Intelligence: Retaining Your Relevance',
-    duration: '03:20',
-    thumb: '/images/hero-stage-speaker.jpg',
+    duration: 'Watch Program',
+    thumb: 'https://img.youtube.com/vi/Nfel6qdXrNI/hqdefault.jpg',
     description:
-      'Explore how AI is transforming our world without losing the human touch — showing why humans working alongside AI will always outperform technology alone.',
-    chapters: [
-      {
-        time: '0:00',
-        label: 'Humans Alongside AI',
-        caption: '"Humans working alongside AI will replace humans working without AI — yet your curiosity, humor, and judgment remain irreplaceable."',
-        image: '/images/hero-stage-speaker.jpg',
-      },
-      {
-        time: '1:15',
-        label: 'From Gutenberg to Generative Intelligence',
-        caption: '"Every great tool in history sparked fear first and human flourishing second. Here is how to stay ahead of the curve with a smile."',
-        image: '/images/sizzle-future-trends.jpg',
-      },
-    ],
+      'How AI is transforming work and daily life while keeping human judgment, humor, and curiosity at the center.',
   },
   {
-    id: 'how-we-got-to-now-reel',
-    tag: 'Keynote Program · 03:45',
+    id: '2TTwNLIDSjE',
+    youtubeId: '2TTwNLIDSjE',
+    url: 'https://youtu.be/2TTwNLIDSjE?si=VujT0YDb_tZ30i4n',
+    tag: 'Keynote Program 02',
     title: 'How We Got to Now',
-    duration: '03:45',
-    thumb: '/images/cruise-theater-packed.jpg',
+    duration: 'Watch Program',
+    thumb: 'https://img.youtube.com/vi/2TTwNLIDSjE/hqdefault.jpg',
     description:
-      'Look backward through history’s most dramatic turning points to see clearly into tomorrow — delivered with Mark’s signature comedy-club timing.',
-    chapters: [
-      {
-        time: '0:00',
-        label: 'Historical Patterns That Predict Tomorrow',
-        caption: '"History doesn’t repeat verbatim, but its rhythms are unmistakable once you know where to look."',
-        image: '/images/cruise-theater-packed.jpg',
-      },
-      {
-        time: '1:40',
-        label: 'Laughing While Learning',
-        caption: '"Audiences retain 7× more information when they are laughing while they learn — turning complex history into unforgettable stories."',
-        image: '/images/hero-stage-speaker.jpg',
-      },
-    ],
+      'Looking backward through history’s sharpest turning points to see tomorrow clearly, delivered with comedy-club timing.',
   },
   {
-    id: 'what-happens-next-reel',
-    tag: 'Keynote Program · 04:10',
+    id: 'SZWdy2klF-A',
+    youtubeId: 'SZWdy2klF-A',
+    url: 'https://youtu.be/SZWdy2klF-A?si=0R6Fxy_OZN77O9CM',
+    tag: 'Keynote Program 03',
     title: 'What Happens Next?',
-    duration: '04:10',
-    thumb: '/images/sizzle-future-trends.jpg',
+    duration: 'Watch Program',
+    thumb: 'https://img.youtube.com/vi/SZWdy2klF-A/hqdefault.jpg',
     description:
-      'An optimistic, eye-opening look at solar energy, vertical farming, supercomputing, and the extraordinary breakthroughs reshaping daily life.',
-    chapters: [
-      {
-        time: '0:00',
-        label: 'Solar, Vertical Farms & Supercomputing',
-        caption: '"While headlines chase today’s noise, breakthroughs in clean energy and abundant food are quietly rewriting our future."',
-        image: '/images/sizzle-future-trends.jpg',
-      },
-      {
-        time: '2:05',
-        label: 'Reason for Long-Term Optimism',
-        caption: '"The best chapters of human ingenuity are not behind us — they are unfolding right in front of us."',
-        image: '/images/mark-zinder-portrait.jpg',
-      },
-    ],
+      'An optimistic tour of solar energy, vertical farming, supercomputing, and the inventions quietly reshaping our world.',
   },
   {
-    id: 'is-it-different-this-time',
-    tag: 'Keynote Program · 02:55',
+    id: '3NFAedOmLBU',
+    youtubeId: '3NFAedOmLBU',
+    url: 'https://youtu.be/3NFAedOmLBU?si=XrSYgeqL07nAPUnW',
+    tag: 'Keynote Program 04',
     title: 'Is It Different This Time?',
-    duration: '02:55',
-    thumb: '/images/mark-zinder-portrait.jpg',
+    duration: 'Watch Program',
+    thumb: 'https://img.youtube.com/vi/3NFAedOmLBU/hqdefault.jpg',
     description:
-      'Separating real generational shifts from passing headlines — equipping audiences with calm perspective, wit, and unmistakable clarity.',
-    chapters: [
-      {
-        time: '0:00',
-        label: 'Separating Signal From Noise',
-        caption: '"Every generation believes it lives in the most turbulent moment ever recorded — and history has a surprising answer."',
-        image: '/images/mark-zinder-portrait.jpg',
-      },
-      {
-        time: '1:25',
-        label: 'Standing Room Only at Sea & on Land',
-        caption: '"Give an audience perspective instead of panic, and you earn their attention from the first laugh to the standing ovation."',
-        image: '/images/cruise-theater-packed.jpg',
-      },
-    ],
+      'Separating real generational shifts from passing headlines, giving audiences calm perspective and sharp wit.',
+  },
+];
+
+export const WORK_WITH_MARK_STEPS = [
+  {
+    id: 'see',
+    title: 'See Mark In Action',
+    description:
+      'Watch Mark’s keynote previews to see how he blends history, AI, and sharp humor.',
+  },
+  {
+    id: 'reach-out',
+    title: 'Reach Out',
+    description:
+      'Share your sailing dates or event details through our quick booking inquiry.',
+  },
+  {
+    id: 'book',
+    title: 'Book Mark Zinder',
+    description:
+      'Mark tailors his talk or multi-day sea series to fit your audience and itinerary.',
+  },
+  {
+    id: 'captivate',
+    title: 'Captivate Your Audience',
+    description:
+      'Guests laugh while learning, retaining 7x more and leaving inspired.',
   },
 ];
 
@@ -195,16 +168,16 @@ export const TESTIMONIALS = [
   {
     featured: false,
     quote:
-      'In just a few hours, word of your outstanding presentation spread like wildfire. Your delivery was dynamic and laced with facts and insights that kept the entire audience waiting for more.',
+      'In just a few hours, word of your presentation spread like wildfire. Your delivery was dynamic and laced with insights that kept the entire audience waiting for more.',
     author: 'Program Committee Review',
     role: 'Southern California Keynote Forum',
   },
   {
     featured: false,
     quote:
-      'We wanted a speaker who would not only entertain, but give real reasons for long-term optimism. Mark was a home run — the audience comment cards were off the charts.',
+      'We wanted a speaker who would entertain and give real reasons for long-term optimism. Mark was a home run. The audience comment cards were off the charts.',
     author: 'Event & Enrichment Director',
-    role: 'National Conference & Special Interest Series',
+    role: 'National Conference Series',
   },
 ];
 
@@ -212,22 +185,22 @@ export const FAQ_ITEMS = [
   {
     question: 'Does Mark tailor his talks for cruise ship sea-day enrichment vs. corporate keynotes?',
     answer:
-      'Yes. For ocean and luxury cruise sailings, Mark delivers a 2-to-6 part Special Interest series designed specifically for curious, well-traveled 60+ guests — blending stand-up humor, world history, and optimistic AI insights with zero sales pitches.',
+      'Yes. For ocean and luxury cruise sailings, Mark delivers a 2 to 6 part Special Interest series tailored for curious, well-traveled 60+ guests: stand-up humor, world history, and optimistic AI insights with zero sales pitches.',
   },
   {
-    question: 'Why do audiences retain 7× more information in Mark’s sessions?',
+    question: 'Why do audiences retain 7x more information in Mark’s sessions?',
     answer:
-      'Rooted in his early career managing comedy clubs and performing magic, Mark pairs crisp comedic timing with clear visual storytelling. When guests are laughing while learning, complex ideas stick effortlessly.',
+      'Rooted in his early career managing comedy clubs and performing magic, Mark pairs crisp comedic timing with clear visual storytelling. When guests laugh while learning, complex ideas stick.',
   },
   {
     question: 'What AV and stage setup does Mark require in a 1,000-seat theater?',
     answer:
-      'A simple wireless lavalier or headset microphone and standard HDMI/16:9 projection. Mark brings self-contained, crisp visuals and requires zero complex stage rigging.',
+      'A wireless lavalier or headset microphone and standard 16:9 HDMI projection. Mark brings self-contained visuals and needs zero complex rigging.',
   },
   {
     question: 'How far in advance should Cruise Directors or Event Planners reach out?',
     answer:
-      'We recommend checking availability 3–9 months ahead for world cruises and headline conferences, though our Nashville speaking desk responds to all inquiries within 24 hours.',
+      'We recommend checking availability 3 to 9 months ahead for world cruises and headline conferences. Our Nashville speaking desk replies within 24 hours.',
   },
 ];
 
@@ -237,11 +210,11 @@ export const CRUISE_SERIES_DAYS = [
     title: 'How We Got to Now: The Hidden Blueprint of History',
     tag: 'Historical Storytelling',
     summary:
-      'Mark opens the voyage by weaving maritime exploration, Renaissance breakthroughs, and surprising human inventions into a thrilling narrative of how our modern world was built.',
+      'Mark opens the voyage by connecting maritime exploration, Renaissance breakthroughs, and human inventions into a gripping story of how our modern world was built.',
     highlights: [
-      'Sets an electric, joyful tone for the entire enrichment program',
+      'Sets an energetic, joyful tone for the enrichment program',
       'Sparks lively conversation across dinner tables and lounges',
-      'Accessible, witty storytelling tailored for well-traveled 60+ guests',
+      'Witty, accessible storytelling tailored for well-traveled 60+ guests',
     ],
     duration: '45-Min Main Theater Talk + 15-Min Live Q&A',
   },
@@ -250,11 +223,11 @@ export const CRUISE_SERIES_DAYS = [
     title: 'Beyond AI: What in the World Happens Next?',
     tag: 'Optimistic Futurism',
     summary:
-      'Guests discover what truly lies beyond the AI buzzwords: dramatic advances in solar power, vertical farming, longevity science, and supercomputing explained with warmth and humor.',
+      'Guests discover what lies beyond AI buzzwords: solar power, vertical farming, longevity science, and supercomputing explained with warmth and humor.',
     highlights: [
       'Zero intimidating tech jargon or bleak sci-fi alarmism',
-      'Visual, jaw-dropping real-world breakthroughs already unfolding',
-      'Frequently drives repeat attendance that fills all 1,000 seats',
+      'Real-world breakthroughs already unfolding globally',
+      'Drives repeat attendance that packs 1,000-seat theaters',
     ],
     duration: '45-Min Main Theater Talk + 15-Min Live Q&A',
   },
@@ -263,11 +236,11 @@ export const CRUISE_SERIES_DAYS = [
     title: 'What Are the Odds? Laughing Through Life’s Great Turns',
     tag: 'Comedy & Inspiration',
     summary:
-      'Blending comedy-club timing, sleight-of-hand wonder, and unforgettable true stories of improbable odds, Mark delivers a joyful finale that leaves the theater roaring on its feet.',
+      'Blending comedy-club timing, magic roots, and true stories of improbable odds, Mark delivers a joyful finale that brings the theater to its feet.',
     highlights: [
-      'Stand-up comedy pacing fused with deep human inspiration',
-      '7× higher retention because guests laugh from start to finish',
-      'Optional evening "Ask the Futurist" fireside salon in the lounge',
+      'Stand-up comedy pacing fused with practical optimism',
+      '7x higher retention because guests laugh from start to finish',
+      'Optional evening "Ask the Futurist" salon in the lounge',
     ],
     duration: '50-Min Signature Finale',
   },
