@@ -1,0 +1,74 @@
+/* ==========================================================================
+   MARK ZINDER DESIGN SYSTEM — EDITORIAL AUTHORITY & OPTIMISTIC ENERGY
+   ========================================================================== */
+
+:root {
+  /* Brand Authority Palette — Deep Navy & Charcoal */
+  --navy-950: #06101d;
+  --navy-900: #0b1b32;
+  --navy-850: #102442;
+  --navy-800: #152e54;
+  --navy-700: #1f406e;
+
+  --charcoal-900: #1a212e;
+  --charcoal-800: #2b3445;
+  --slate-600: #4a5568;
+  --slate-500: #64748b;
+
+  /* Energy & Optimism Accents — Vibrant Gold & Warm Amber/Orange */
+  --gold-600: #b8860b;
+  --gold-500: #d4a017;
+  --gold-400: #e7bc48;
+  --gold-300: #f3d57a;
+  --gold-100: #fbf3d9;
+
+  --orange-600: #d9641e;
+  --orange-500: #ea782e;
+  --orange-400: #f59451;
+
+  /* Clean Whitespace & Editorial Surfaces */
+  --white: #ffffff;
+  --ivory-50: #faf8f4;
+  --ivory-100: #f2ede3;
+  --ivory-200: #e6dfd1;
+
+  /* Borders & Glass Overlays */
+  --border-light: rgba(11, 27, 50, 0.1);
+  --border-gold: rgba(212, 160, 23, 0.35);
+  --border-white-subtle: rgba(255, 255, 255, 0.14);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Type Scale — Tuned for high readability (60+ friendly) */
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-lg: 1.1875rem;   /* 19px */
+  --text-xl: 1.375rem;    /* 22px */
+  --text-2xl: 1.75rem;    /* 28px */
+  --text-3xl: 2.25rem;    /* 36px */
+  --text-4xl: 3rem;       /* 48px */
+  --text-5xl: 3.75rem;    /* 60px */
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --container-narrow: 920px;
+  --nav-height: 82px;
+
+  /* Elevation */
+  --shadow-sm: 0 2px 8px rgba(6, 16, 29, 0.06);
+  --shadow-md: 0 12px 32px rgba(6, 16, 29, 0.1);
+  --shadow-lg: 0 24px 56px rgba(6, 16, 29, 0.16);
+  --shadow-glow-gold: 0 10px 28px rgba(217, 100, 30, 0.28);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
