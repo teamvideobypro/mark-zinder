@@ -44,16 +44,12 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
         <SizzleReelBackground />
 
         <div className="hero-viewport__inner">
-          <div className="hero-viewport__top">
+          <div className="hero-viewport__main-stack">
             <span className="hero-kicker">{HERO_CONTENT.badge}</span>
-          </div>
 
-          <div className="hero-viewport__headline-wrap">
             <h1 className="hero-viewport__title">{HERO_CONTENT.headline}</h1>
-          </div>
 
-          <div className="hero-viewport__bottom">
-            <div className="hero-viewport__left-col">
+            <div className="hero-viewport__body-cta">
               <p className="hero-viewport__subtitle">{HERO_CONTENT.subheadline}</p>
 
               <div className="hero__ctas">
@@ -76,7 +72,9 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
                 </button>
               </div>
             </div>
+          </div>
 
+          <div className="hero-viewport__bottom-bar">
             <div className="hero-metrics-flat" aria-label="Speaker highlights">
               <div className="hero-metric-item">
                 <strong>7×</strong>
@@ -149,12 +147,12 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
               <h2 id="about-heading" className="section-heading">
                 From Comedy Clubs and Magic Stages to NASA and the High Seas.
               </h2>
-              <p className="section-lead" style={{ marginBottom: 18 }}>
+              <p className="section-lead" style={{ marginBottom: 12 }}>
                 Before sharing global stages with pioneers at NASA and IBM, or serving as National
                 Spokesman alongside Sir John Templeton, Mark managed comedy clubs and performed
                 magic.
               </p>
-              <p style={{ color: 'var(--slate-600)', margin: '0 0 26px', fontSize: '1.04rem' }}>
+              <p style={{ color: 'var(--slate-600)', margin: '0 0 18px', fontSize: '1.04rem' }}>
                 That background shapes every keynote today: holding a 1,000-seat room in warmth and
                 laughter while translating AI, history, and future trends into stories guests
                 remember.
@@ -266,7 +264,7 @@ export default function HomePage({ onOpenVideo, onOpenBooking, onOpenTopic }) {
               <h2 id="cruise-spotlight-heading" className="section-heading section-heading--light">
                 Captivating Audiences Across the Seven Seas.
               </h2>
-              <p className="section-lead section-lead--light" style={{ marginBottom: 24 }}>
+              <p className="section-lead section-lead--light" style={{ marginBottom: 16 }}>
                 Stand-up comedy meets intellectual discovery. Guests retain 7× more information
                 because they laugh while learning, filling 1,000-seat cruise ship theaters on sea
                 days.

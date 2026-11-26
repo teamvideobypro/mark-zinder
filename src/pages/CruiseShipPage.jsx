@@ -45,11 +45,11 @@ export default function CruiseShipPage({ onOpenVideo, onOpenBooking }) {
               Stand-up comedy meets intellectual discovery
             </span>
 
-            <h1 className="hero-viewport__title" style={{ marginBottom: 18 }}>
+            <h1 className="hero-viewport__title" style={{ marginBottom: 12 }}>
               Captivating Audiences Across the Seven Seas.
             </h1>
 
-            <p className="hero-viewport__subtitle" style={{ maxWidth: '62ch', marginBottom: 28 }}>
+            <p className="hero-viewport__subtitle" style={{ maxWidth: '62ch', marginBottom: 18 }}>
               Designed for Cruise Directors seeking headline Special Interest talent and educated
               60+ guests. Mark packs 1,000-seat cruise ship theaters with talks on AI, history, and
               future trends where audiences retain 7x more information because they laugh while
